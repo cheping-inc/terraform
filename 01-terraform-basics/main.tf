@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "my_s3_bucket" {
 }
 
 resource "aws_iam_user" "my_iam_user" {
-	name "rodart2"
+	name = "rodart2"
 }
 
 output "my_bucket_details" {
