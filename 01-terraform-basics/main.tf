@@ -9,7 +9,7 @@ provider "aws" {
 
 resource "aws_security_group" "http_server_sg" {
   name = "http_server_sg"
-  vpc_id = "vpc-c49ff1be"
+  vpc_id = "vpc-0ff4f5d018cee80a7"
   //vpc_id = aws_default_vpc.default.id
 
   ingress {
@@ -45,7 +45,7 @@ resource "aws_instance" "http_server" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]
 
-  subnet_id              = "subnet-3f7b2563"
+  subnet_id              = "subnet-0338b032a4bb517fe"
   //subnet_id = tolist(data.aws_subnet_ids.default_subnets.ids)[0]
 
   connection {
